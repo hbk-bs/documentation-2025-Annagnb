@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature of Code – Reflexion</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <main>
+        <h1>debate club</h1>
+        <h2>Reflektion</h2>
+        <p class="intro">
+            Während unseres Kurses hatten wir die Aufgabe, eine gemeinsame Diskussion ähnlich zu einem debate club zu führen, bei der wir zu einer aktuellen Fragestellung argumentieren sollten. Ich wurde dem Zufall nach der Pro-KI/AGI-Gruppe zugeteilt. Die Vorbereitung der Präsentation diente dabei vor allem dazu, unsere Argumente strukturiert darzustellen und für die Diskussion vorzubereiten. Während ich mich mit den Inhalten auseinandergesetzt habe, wurde mir klar, dass KI und AGI viele Chancen bieten können, etwa in der Forschung, Medizin oder Wirtschaft. Gleichzeitig habe ich aber auch deutlich gesehen, dass es zahlreiche Risiken und offene Fragen gibt, etwa im Hinblick auf Datenschutz, ethische Verantwortung und die gesellschaftlichen Auswirkungen. Durch die Vorbereitung konnte ich die Pro-KI-Perspektive nachvollziehen und diskutieren, ohne meine kritische Haltung aufzugeben. Insgesamt hat die Aufgabe mir geholfen, das Thema differenziert zu betrachten und die Chancen und Risiken von KI und AGI näher einzuschätzen.
+        </p>
+        <div class="category-container">
+            
+        </div>
+
+        <a href="../index.html" class="back-button">← Zurück zur Hauptseite</a>
+    </main>
+    <footer>
+        <p>Grundlagen der digitalen Kommunikation SoSe 2025 - HBK Braunschweig</p>
+    </footer>
+    <script>
+        document.addEventListener("mousemove", function(e) {
+            for (let i = 0; i < 6; i++) {
+                const sparkle = document.createElement("div");
+                sparkle.className = "sparkle";
+                sparkle.style.setProperty('--sparkle-scale', (0.7 + Math.random() * 1.5).toFixed(2));
+                const offsetX = (Math.random() - 0.5) * 18;
+                const offsetY = (Math.random() - 0.5) * 18;
+                sparkle.style.left = (e.pageX + offsetX) + "px";
+                sparkle.style.top = (e.pageY + offsetY) + "px";
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 700);
+            }
+        });
+    </script>
+</body>
+</html>

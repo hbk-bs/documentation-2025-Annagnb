@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strauchbewegung – Nature of Code</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <main>
+      <div class="project-layout">
+        <div class="info-block">
+          <h1>Strauchbewegung</h1>
+          <h2>Nature of Code</h2>
+          <p class="intro">
+Die Aufgabe zum Thema "nature of code" war, während der Exkursion nach Amrum, Strukturen oder Prozesse in der Natur zu beobachten und diese anschließend in Code zu übersetzen. Ziel war nicht, eine naturgetreue Abbildung zu schaffen, sondern ein zugrunde liegendes Prinzip sichtbar zu machen und gestalterisch zu interpretieren.
+
+Ich habe mich für die Bewegungen von Sträuchern im Wind entschieden. Auffällig war für mich vor allem das Zusammenspiel von Stabilität und Flexibilität. Während die unteren Äste kaum nachgeben, reagieren die oberen Zweige sehr sensibel auf Windstöße und werden in unterschiedliche Richtungen abgelenkt. Diese Beobachtung bildete so die Grundlage meiner Animation, mit der ich die Dynamik und Logik dieser Bewegung nachvollziehen wollte.
+
+Die Übertragung der Beobachtungen in Code stellte zunächst eine kleine Herausforderung dar, da sich die Bewegung eines Strauchs nicht auf ein simples Hin- und Herschwingen reduzieren lässt. Während des Recherchierens bin ich auf verschiedene Modelle gestoßen, die zur Beschreibung solcher Dynamiken herangezogen werden können. Das Masse-Feder-Dämpfer-System beispielsweise, oder die Arbeit mit Perlin Noise zur Simulation von Windschwankungen. Diese Konzepte haben mir geholfen, die Logik hinter den Bewegungen besser zu verstehen. Die Auseinandersetzung mit diesen Ansätzen war zentral, um meine Animation weiterzuentwickeln und das Prinzip der Strauchbewegung im Kern erfassen zu können.
+
+Im Laufe dieses Projekts habe ich verschiedene Sketche entwickelt, von einfachen Partikelsystemen bis hin zu Farb- und Strukturvariationen. Nicht alle Ansätze führten für mich zu überzeugenden Ergebnissen, dennoch waren sie für mein Verständnis der Bewegungsprinzipien entscheidend. Was sich als besonders komplex erwies, war die Abbildung hierarchischer Abhängigkeiten innerhalb des Strauchs: kleinere Zweige reagieren schneller und stärker, während dickere Äste träger und stabiler bleiben. Dabei war mir bewusst, dass die Darstellung nicht vollständig realistisch sein muss. Neben der Auseinandersetzung mit physikalischen Prinzipien stand für mich auch die gestalterische Dimension im Vordergrund. Ich habe bewusst auf visuelle Abstraktion gesetzt und Entscheidungen getroffen, die für mich die Bewegung ansprechend oder interessant wirken lassen, auch wenn sie nicht exakt der Natur entsprechen.
+
+Rückblickend war für mich besonders erkenntnisreich, Naturprozesse nicht nur visuell zu erfassen, sondern analytisch zu betrachten und in abstrahierte Regeln zu überführen. Auch wenn meine Umsetzung relativ reduziert geblieben ist, habe ich versucht zu zeigen, dass es bei dieser Aufgabe weniger um eine visuelle Kopie geht, sondern vielmehr um die Erfassung und Darstellung eines Bewegungsprinzips.          </p>
+          <img src="strauch-bild.png" alt="Projekt-Screenshot">
+        </div>
+        <div class="button-block">
+          <div class="category-container">
+            <a href="nature-of-code-Annagnb/index.html" class="category">
+              Projekt ansehen
+            </a>
+           
+            <a href="https://github.com/hbk-bs/nature-of-code-Annagnb" class="repo-btn" target="_blank">
+                GitHub Repo
+            </a>
+          </div>
+          <a href="../index.html" class="back-button">← Zurück zur Hauptseite</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <p>Grundlagen der digitalen Kommunikation SoSe 2025 - HBK Braunschweig</p>
+    </footer>
+    <script>
+        // Sparkle-Effekt wie gehabt
+        document.addEventListener("mousemove", function(e) {
+            for (let i = 0; i < 6; i++) {
+                const sparkle = document.createElement("div");
+                sparkle.className = "sparkle";
+                sparkle.style.setProperty('--sparkle-scale', (0.7 + Math.random() * 1.5).toFixed(2));
+                const offsetX = (Math.random() - 0.5) * 18;
+                const offsetY = (Math.random() - 0.5) * 18;
+                sparkle.style.left = (e.pageX + offsetX) + "px";
+                sparkle.style.top = (e.pageY + offsetY) + "px";
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 700);
+            }
+        });
+    </script>
+</body>
+</html>
